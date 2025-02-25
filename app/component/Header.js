@@ -15,35 +15,7 @@ export default function Header(){
 
     
     return(
-        // <div className= {`${styles.bgHeader} align-items-center`}>
-        //     <div className="container">
-                
-        //         <div className="row justify-content-between">
-        //             {user ? (<>
-        //                 <h1 className="col-10">Store Test</h1>
-        //                 <div className="row col-2  justify-content-around align-items-center">
-        //                     <h4 className="col-6">{user.name}</h4>
-        //                     <button onClick={async()=>{
-        //                         await logout()
-        //                         logo()
-        //                         router.push("/register")
-        //                     }} className="col-6">logout</button>
-        //                 </div>
-        //                     </>) :(
-                        
-        //                 <>
-        //                     <h1 className="col-10">Store Test</h1>
-        //                     <div className={`row col-2  justify-content-around align-items-center ${styles.Link}`}>
-        //                         <Link className="col-4" href={"/login"}>login</Link>
-        //                         <Link className="col-4" href={"/register"}>register</Link>
-        //                         <Link className="col-4" href={"/post"}>post</Link>
-        //                     </div>
-        //                 </>
-                        
-        //             )}
-        //         </div>
-        //     </div>
-        // </div>
+        
         <div className={`bg-primary ${styles.bgheader}`}>
             <div className="container">
                 <nav className="navbar bg-primary  navbar-expand-lg  mb-3" data-bs-theme="dark">
@@ -63,7 +35,7 @@ export default function Header(){
                                     <button className="btn btn-light" onClick={async()=>{
                                             await logout()
                                             logo()
-                                            router. push("/register")
+                                            router. push("/login")
                                             }} >logout
                                         
                                     </button>
@@ -73,6 +45,9 @@ export default function Header(){
                                 <>
                                     <li className="nav-item">
                                         <Link className={`nav-link ${pathname == "/" ? styles.activeLink : ""}`} aria-current="page" href="/">Home</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className={`nav-link ${pathname == "/post" ? styles.activeLink : ""}`} aria-current="page" href="/">posts</Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className={`nav-link ${pathname == "/login" ? styles.activeLink : ""}`} aria-current="page" href="/login">login</Link>

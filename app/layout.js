@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import BootstrapComponent from "@/app/component/BootstrapComponent";
 import Header from "./component/Header";
 import { AppContext } from "./context/AppContext";
+import { ToastContainer } from "react-toastify";
 
 
 export const metadata = {
@@ -13,11 +14,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body >
-          <AppContext>
-              <Header/>
-              {children}
-              <BootstrapComponent/>
-          </AppContext>
+          
+              <AppContext>
+                    <Header/>
+                    {children}
+                    <BootstrapComponent/>
+                    <ToastContainer/>
+              </AppContext>
+          
       </body>
     </html>
   );

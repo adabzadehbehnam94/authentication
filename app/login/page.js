@@ -5,6 +5,7 @@ import { login } from "../component/auth"
 import { useRouter } from "next/navigation"
 import Button from "../component/Button"
 import TestContext from "../context/AppContext"
+import { toast } from "react-toastify"
 
 
 
@@ -16,7 +17,10 @@ export default function Login(){
    useEffect(()=>{
     if(state?.success){
         handleuser(state?.user)
+        toast.success(state?.success)
         router.push("/")
+    }else{
+        toast.error(state?.error)
     }
    },[state])
 
@@ -24,7 +28,7 @@ export default function Login(){
     return(
         <div className="container">
             
-             <form action={formAction} className="col-12 col-lg-6 mx-auto">
+             <form action={formAction} className="col-12 col-md-6 mx-auto">
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                     <input name="email" type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
@@ -37,8 +41,8 @@ export default function Login(){
                 
                 <Button name ="login"/>
 
-                <p>{state?.error}</p>
-                <p>{state?.success}</p>
+                {/* <p>{state?.error}</p>
+                <p>{state?.success}</p> */}
              </form> 
         </div>
     )

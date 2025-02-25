@@ -15,13 +15,13 @@ const fetchpost = async ()=>{
 export default async function Post (){
     const post = await fetchpost() 
     return(
-        <>
+        <div className="container">
             {post.map((item)=>(
-                <div key={item.id} style={{border : "1px solid black",marginBottom : "10px"}}>
+                <div className="px-2"  key={item.id} style={{border : "1px solid black",marginBottom : "10px"}}>
                     <h3>{item.title}</h3>
                     <p>{item.body}</p>
                 </div>
             ))}
-        </>
+        </div>
     )
 }
