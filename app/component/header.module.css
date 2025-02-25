@@ -1,0 +1,36 @@
+/* .bgheader{
+    background-color: #1e90ff;
+    display: flex;
+    align-items:center;
+    margin-bottom: 20px;
+} */
+
+.bgheader a{
+    text-decoration: none;
+    color: #fff;
+
+
+}
+
+.bgheader a:hover{
+    color: #ffff00 !important;
+}
+
+.bgheader a.activeLink{
+    color: #ffff00 !important;
+}
+
+.name{
+    margin-right: 20px;
+    color: #fff;
+}
+
+/* .btMobile{
+    border-color: #fff !important;
+}
+
+.btMobile span{
+    color: #fff !important;
+    
+} */
+
